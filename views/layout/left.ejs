@@ -1,0 +1,83 @@
+<!-- Main Container -->
+
+<div class="container">
+  <!-- Left Sidebar -->
+
+  <aside class="sidebar-left">
+    <!-- Board Navigation -->
+
+    <div class="sidebar-section">
+      <h3 class="section-title">🎯 Workspaces</h3>
+      <div class="board-nav">
+        <a href="#personal" class="board-item active">
+          <svg class="board-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+            />
+          </svg>
+          Personal
+          <span class="board-count"><%= personal %></span>
+        </a>
+        <a href="#work" class="board-item">
+          <svg class="board-icon" viewBox="0 0 24 24">
+            <path
+              d="M20 6h-2.5l-1.5-1.5h-5L9.5 6H7c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"
+            />
+          </svg>
+          Work Projects
+          <span class="board-count"><%= workCount %></span>
+        </a>
+        <a href="#habits" class="board-item">
+          <svg class="board-icon" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Habits
+          <span class="board-count">6</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="sidebar-section">
+      <h3 class="section-title">📊 Quick Stats</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Pending</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flagged Tasks -->
+    <div class="sidebar-section">
+      <h3 class="section-title">⭐ Flagged Tasks</h3>
+      <div class="flagged-tasks">
+        <div class="flagged-task">
+          <div class="flagged-indicator"></div>
+          <div class="flagged-content">
+            <div class="flagged-title">Product Launch Meeting</div>
+            <div class="flagged-time">Today, 2:00 PM</div>
+          </div>
+        </div>
+        <div class="flagged-task">
+          <div class="flagged-indicator"></div>
+          <div class="flagged-content">
+            <div class="flagged-title">Client Presentation</div>
+            <div class="flagged-time">Tomorrow, 10:00 AM</div>
+          </div>
+        </div>
+        <div class="flagged-task">
+          <div class="flagged-indicator"></div>
+          <div class="flagged-content">
+            <div class="flagged-title">Code Review</div>
+            <div class="flagged-time">Aug 3, 3:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>

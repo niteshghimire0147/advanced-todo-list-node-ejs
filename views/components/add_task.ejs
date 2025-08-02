@@ -1,0 +1,244 @@
+<%- include('../layout/header') %>
+
+<section
+  class="form-section sidebar-section"
+  style="max-width: 600px; margin: 2rem auto"
+>
+  <h2 class="section-title">Add New Task</h2>
+  <p style="color: var(--text-secondary); margin-bottom: 1.5rem">
+    Fill in the details below to add a new task.
+  </p>
+
+  <form action="/add" method="POST" class="task-form">
+    <label
+      for="title"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Task Title
+    </label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      required
+      placeholder="Enter task title"
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--glass-border);
+        background: var(--glass-bg);
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      "
+    />
+
+    <label
+      for="description"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Description
+    </label>
+    <textarea
+      id="description"
+      name="description"
+      rows="4"
+      placeholder="Describe the task..."
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--glass-border);
+        background: var(--glass-bg);
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      "
+      required
+    ></textarea>
+
+    <label
+      for="dueDate"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Due Date
+    </label>
+    <input
+      type="date"
+      id="dueDate"
+      name="dueDate"
+      required
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--glass-border);
+        background: var(--glass-bg);
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      "
+    />
+
+    <label
+      for="priority"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Priority
+    </label>
+    <select
+      id="priority"
+      name="priority"
+      required
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        background: var(--dark-secondary);
+        border: 1px solid var(--glass-border);
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      "
+    >
+      <option value="" disabled selected>Select priority</option>
+      <option value="high">High Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="low">Low Priority</option>
+    </select>
+
+    <label
+      for="status"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Status
+    </label>
+    <select
+      id="status"
+      name="status"
+      required
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        background: var(--dark-secondary);
+        border: 1px solid var(--glass-border);
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      "
+    >
+      <option value="" disabled selected>Select Status</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <label
+      for="project"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Project
+    </label>
+    <select
+      id="project"
+      name="project"
+      required
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        background: var(--dark-secondary);
+        border: 1px solid var(--glass-border);
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      "
+    >
+      <option value="" disabled selected>Select Project</option>
+      <option value="Personal">Personal</option>
+      <option value="Work">Work</option>
+    </select>
+
+    <label
+      for="flag"
+      style="
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      "
+    >
+      Flag
+    </label>
+    <select
+      id="flag"
+      name="flag"
+      required
+      style="
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        background: var(--dark-secondary);
+        border: 1px solid var(--glass-border);
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      "
+    >
+      <option value="" disabled selected>Select option</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <div style="display: flex; gap: 1rem">
+      <button type="submit" class="action-btn primary" style="flex: 1">
+        Add Task
+      </button>
+      <button
+        type="reset"
+        class="action-btn"
+        style="
+          flex: 1;
+          background: var(--dark-secondary);
+          color: var(--text-secondary);
+          border: 1px solid var(--glass-border);
+        "
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</section>
+
+<%- include('../layout/footer') %>
